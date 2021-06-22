@@ -1,0 +1,555 @@
+/* ------------------------------
+FUENTES PERSONALIZADAS 
+---------------------------------*/
+@font-face {
+    font-family: 'sarabunbold';
+    src: url('fonts/sarabun-bold.woff2') format('woff2'),
+         url('fonts/sarabun-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sarabunextrabold';
+    src: url('fonts/sarabun-extrabold.woff2') format('woff2'),
+         url('fonts/sarabun-extrabold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sarabunextralight';
+    src: url('fonts/sarabun-extralight.woff2') format('woff2'),
+         url('fonts/sarabun-extralight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sarabunextralight_italic';
+    src: url('fonts/sarabun-extralightitalic.woff2') format('woff2'),
+         url('fonts/sarabun-extralightitalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sarabunitalic';
+    src: url('fonts/sarabun-italic.woff2') format('woff2'),
+         url('fonts/sarabun-italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sarabunlight';
+    src: url('fonts/sarabun-light.woff2') format('woff2'),
+         url('fonts/sarabun-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sarabunmedium';
+    src: url('fonts/sarabun-medium.woff2') format('woff2'),
+         url('fonts/sarabun-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sarabunregular';
+    src: url('fonts/sarabun-regular.woff2') format('woff2'),
+         url('fonts/sarabun-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sarabunlight';
+    src: url('sarabun-light.woff2') format('woff2'),
+         url('sarabun-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sarabunmedium';
+    src: url('fonts/sarabun-medium.woff2') format('woff2'),
+         url('fonts/sarabun-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sarabunsemibold';
+    src: url('fonts/sarabun-semibold.woff2') format('woff2'),
+         url('fonts/sarabun-semibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'sarabunthin';
+    src: url('fonts/sarabun-thin.woff2') format('woff2'),
+         url('fonts/sarabun-thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('fonts/Brandon/BrandonGrotesque-Thin.eot');
+    src: local('Brandon Grotesque Thin'), local('BrandonGrotesque-Thin'),
+        url('fonts/Brandon/BrandonGrotesque-Thin.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Brandon/BrandonGrotesque-Thin.woff2') format('woff2'),
+        url('fonts/Brandon/BrandonGrotesque-Thin.woff') format('woff'),
+        url('fonts/Brandon/BrandonGrotesque-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('fonts/Brandon/BrandonGrotesque-Medium.eot');
+    src: local('Brandon Grotesque Medium'), local('BrandonGrotesque-Medium'),
+        url('fonts/Brandon/BrandonGrotesque-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/BrandonGrotesque-Medium.woff2') format('woff2'),
+        url('fonts/BrandonGrotesque-Medium.woff') format('woff'),
+        url('fonts/BrandonGrotesque-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('fonts/Brandon/BrandonGrotesque-BoldItalic.eot');
+    src: local('Brandon Grotesque Bold Italic'), local('BrandonGrotesque-BoldItalic'),
+        url('fonts/Brandon/BrandonGrotesque-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Brandon/BrandonGrotesque-BoldItalic.woff2') format('woff2'),
+        url('fonts/Brandon/BrandonGrotesque-BoldItalic.woff') format('woff'),
+        url('fonts/Brandon/BrandonGrotesque-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('fonts/Brandon/BrandonGrotesque-BlackItalic.eot');
+    src: local('Brandon Grotesque Black Italic'), local('BrandonGrotesque-BlackItalic'),
+        url('fonts/Brandon/BrandonGrotesque-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Brandon/BrandonGrotesque-BlackItalic.woff2') format('woff2'),
+        url('fonts/Brandon/BrandonGrotesque-BlackItalic.woff') format('woff'),
+        url('fonts/Brandon/BrandonGrotesque-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('fonts/Brandon/BrandonGrotesque-Regular.eot');
+    src: local('Brandon Grotesque Regular'), local('BrandonGrotesque-Regular'),
+        url('fonts/Brandon/BrandonGrotesque-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Brandon/BrandonGrotesque-Regular.woff2') format('woff2'),
+        url('fonts/Brandon/BrandonGrotesque-Regular.woff') format('woff'),
+        url('fonts/Brandon/BrandonGrotesque-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('fonts/Brandon/BrandonGrotesque-RegularItalic.eot');
+    src: local('Brandon Grotesque Regular Italic'), local('BrandonGrotesque-RegularItalic'),
+        url('fonts/Brandon/-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Brandon/BrandonGrotesque-RegularItalic.woff2') format('woff2'),
+        url('fonts/Brandon/BrandonGrotesque-RegularItalic.woff') format('woff'),
+        url('fonts/Brandon/BrandonGrotesque-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('fonts/Brandon/BrandonGrotesque-Bold.eot');
+    src: local('Brandon Grotesque Bold'), local('BrandonGrotesque-Bold'),
+        url('fonts/Brandon/BrandonGrotesque-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Brandon/BrandonGrotesque-Bold.woff2') format('woff2'),
+        url('fonts/Brandon/BrandonGrotesque-Bold.woff') format('woff'),
+        url('fonts/Brandon/BrandonGrotesque-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('fonts/Brandon/BrandonGrotesque-MediumItalic.eot');
+    src: local('Brandon Grotesque Medium Italic'), local('BrandonGrotesque-MediumItalic'),
+        url('fonts/Brandon/BrandonGrotesque-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Brandon/BrandonGrotesque-MediumItalic.woff2') format('woff2'),
+        url('fonts/Brandon/BrandonGrotesque-MediumItalic.woff') format('woff'),
+        url('fonts/Brandon/BrandonGrotesque-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('fonts/Brandon/BrandonGrotesque-ThinItalic.eot');
+    src: local('Brandon Grotesque Thin Italic'), local('BrandonGrotesque-ThinItalic'),
+        url('fonts/Brandon/BrandonGrotesque-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Brandon/BrandonGrotesque-ThinItalic.woff2') format('woff2'),
+        url('fonts/Brandon/BrandonGrotesque-ThinItalic.woff') format('woff'),
+        url('fonts/Brandon/BrandonGrotesque-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('fonts/Brandon/BrandonGrotesque-LightItalic.eot');
+    src: local('Brandon Grotesque Light Italic'), local('BrandonGrotesque-LightItalic'),
+        url('fonts/Brandon/BrandonGrotesque-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Brandon/BrandonGrotesque-LightItalic.woff2') format('woff2'),
+        url('fonts/Brandon/BrandonGrotesque-LightItalic.woff') format('woff'),
+        url('fonts/Brandon/BrandonGrotesque-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('fonts/Brandon/BrandonGrotesque-Light.eot');
+    src: local('Brandon Grotesque Light'), local('BrandonGrotesque-Light'),
+        url('fonts/Brandon/BrandonGrotesque-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Brandon/BrandonGrotesque-Light.woff2') format('woff2'),
+        url('fonts/Brandon/BrandonGrotesque-Light.woff') format('woff'),
+        url('fonts/Brandon/BrandonGrotesque-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Brandon Grotesque';
+    src: url('fonts/Brandon/BrandonGrotesque-Black.eot');
+    src: local('Brandon Grotesque Black'), local('BrandonGrotesque-Black'),
+        url('fonts/Brandon/BrandonGrotesque-Black.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Brandon/BrandonGrotesque-Black.woff2') format('woff2'),
+        url('fonts/Brandon/BrandonGrotesque-Black.woff') format('woff'),
+        url('fonts/Brandon/BrandonGrotesque-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;}
+
+
+    @media screen and (min-width: 980px) {
+
+        .col {
+          flex: 1;
+        }
+       
+        .col-05 {
+          flex: 0.5;
+        }
+      
+        .col-10 {
+          flex: 1;
+        }
+      
+        .col-15 {
+          flex: 1.5;
+        }
+        
+        .col-20 {
+          flex: 2;
+        }
+        
+        .col-25 {
+          flex: 2.5;
+        }
+        
+        .col-30 {
+          flex: 3;
+        }
+        
+        .col-35 {
+          flex: 3.5;
+        }
+      
+        .col-40 {
+          flex: 4;
+        }
+        
+        .col-45 {
+          flex: 4.5;
+        }
+        
+        .col-50 {
+          flex: 5;
+        }
+        
+        .col-55 {
+          flex: 5.5;
+        }
+        
+        .col-60 {
+          flex: 6;
+        }
+        
+        .col-65 {
+          flex: 6.5;
+        }
+        
+        .col-70 {
+          flex: 7;
+        }
+        
+        .col-75 {
+          flex: 7.5;
+        }
+        
+        .col-80 {
+          flex: 8;
+        }
+        
+        .col-85 {
+          flex: 8.5;
+        }
+        
+        .col-90 {
+          flex: 9;
+        }
+        
+        .col-95 {
+          flex: 9.5;
+        }
+
+        .col-150 {
+            flex: 15;
+          }
+      }    
+
+/* ------------------------------
+CSS PERSONALIZAD0 
+---------------------------------*/
+
+/* Variables globales */
+
+$liviana: 'sarabunlight';
+$brandon: 'Brandon Grotesque';
+$blanco: #FFFFFF;
+$amarillo: #f6e45e;
+
+
+
+body {
+    background-color:#737163;
+    transition: 0.3s background-color;
+ }
+
+body.changeColor {
+    background-color: #fffbdd;
+ }
+
+h1{
+    font-family: $brandon;
+    font-size: 50px;
+    color: $blanco;
+    text-align: right;
+    margin-bottom: -30px;
+    margin-right: 150px;
+    z-index: 1;
+    position: relative;
+}
+
+i{
+    padding: 5px;
+}
+
+.logo{
+    font-family: $brandon;
+    font-size: 25px;
+    font-weight: bold;
+    color: $blanco;
+    margin-top: -5px;
+}
+
+.slider{
+    display: flex;
+    margin-left: auto;
+    padding-right: 20px;
+}
+
+.espacio{
+    padding: 20px;
+    
+}
+
+
+.liviana{
+    font-family: $liviana;
+    font-size: 11px;
+    color: $blanco;
+    max-width: 170px;
+}
+
+.bordeabajo{
+    padding-bottom: 20px;
+    border-bottom: 1px solid yellow;
+    width: 100%;
+}
+
+.botonamarillo{
+    color: #34332c;
+    padding: 10px 20px;
+    background-color: $amarillo;
+    border: solid $amarillo 2px;
+    font-family: $brandon;
+    font-weight: normal;
+}
+
+.botonamarillo:hover{
+    color:$amarillo;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: solid $amarillo 2px;
+    font-family: $brandon;
+    font-weight: normal;
+}
+
+.container{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* ------------------------------
+NAVEGACIÓN
+---------------------------------*/
+
+nav{    
+    display: flex;
+
+            ul{
+                margin-left: auto;
+                margin-right: auto;
+    
+
+                li{
+                  display: inline-flex;
+                  padding: 10px;
+
+
+    
+
+                    a{
+                        color: #FFFFFF; 
+                        font-family: $brandon;
+                        text-decoration: none;
+                    }
+                    a:hover{
+                        color: $amarillo; 
+                        font-family: $brandon;
+                        text-decoration: none;
+                    }
+                }
+            }
+}
+
+
+.navegacion{    
+display: flex;
+
+    ul{
+        margin-left: auto;
+        margin-right: auto;
+
+
+             li{
+                display: inline-flex;
+                padding: 10px;
+                    a{
+                        color: #FFFFFF; 
+                        font-family: $brandon;
+                        font-weight: 300;
+                        font-size: 20px;
+                    }
+                }
+
+    }
+}
+
+
+.navfooter{    
+display: flex;
+
+    ul{
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+
+
+             li{
+                display: inline-flex;
+                padding: 10px;
+                    a{
+                        color: #FFFFFF; 
+                        font-family: $brandon;
+                        font-weight: 300;
+                        font-size: 15px;
+                    }
+            }
+    }
+}
+
+/* ------------------------------
+Animación texto que ingresa
+---------------------------------*/
+  
+.banner{
+    font-family: 'sarabunextralight_italic';
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}  
+
+.animate__animated.animate__fadeInRight {
+    --animate-delay: 0.5s;
+  }
+
+hr{
+    width: 50%;
+}
+
+/* ------------------------------
+GRID COLUMNAS
+---------------------------------*/
+  
+  .flexbox-container {
+	display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.flexbox-container > div {
+	width: 100%;
+}
+
+/* ------------------------------
+FOOTER
+---------------------------------*/
+
+footer{
+    background-color: #34332c;
+    color: #FFFFFF;
+    padding-top: 50px;
+}
+
+.datos{
+    font-family: $liviana;
+    font-size: 10px;
+}
+
+.desplazamiento {
+    margin-top: 100px;
+    padding: 20px;
+}
+
