@@ -4,7 +4,10 @@ body {
     flex-direction: column;
     font-family: "Segoe UI", Tahoma, sans-serif;
     font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
     padding: 1rem 2rem;
+    width:65%;
 }
 
 h1 {border-bottom: 4px rgb(92, 20, 125) solid;
@@ -21,7 +24,6 @@ ul {border-bottom: 3px rgb(92, 20, 125) solid;
     border-top: 2px rgb(92, 20, 125) solid;
     margin-top: 0.1rem;
     padding: 0.6rem 1rem 0.6rem 2rem;
-    width:75%;
 }
 
 li {
