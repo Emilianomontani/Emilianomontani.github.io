@@ -23,3 +23,21 @@ li {
     margin-bottom: 0.5rem;
 }
 
+a{
+    color: rgb(92, 20, 125);
+}
+
+a:hover{
+    color: rgb(92, 20, 125);
+    text-decoration: none;
+}
+
+a:visited{
+    color: rgb(92, 20, 125);
+    text-decoration: none;
+}
+
+a:focus{
+    box-shadow: #ffffff 0px 0px 0px 0px, #f8ff7c 0px 0px 0px 3px inset, #1f2331 0px 0px 0px 2px;
+}
+
