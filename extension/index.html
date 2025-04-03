@@ -15,9 +15,9 @@
 <p>Esta aplicación está en fase beta. Puede contener fallos puntuales en los resultados lanzados. Se debe realizar una comprobación manual para verificar el contenido. </p>
 <p>Se aplica un rol de estado para que la lista se anuncie a las personas usuarias que navegan con productos de apoyo. La extensión es funcional navegando con teclado e incluye un foco visible y un contraste de más de 4,5:1 en todos sus textos y elementos interactivos.</p>
 <ul>
- <li>Verifica si hay párrafos vacíos o con &quot; &nbsp &quot;.</li>
+ <li>Verifica si hay párrafos vacíos o con &quot; -&nbsp- &quot;.</li>
  <li>Si hay etiquetas con <strong>&lt;b&gt;, &lt;u&gt;, &lt;small&gt;, &lt;br&gt;, &lt;Font&gt;</strong>.</li>
- <li>Si hay etiquetas <strong>&lt;div&gt; o &lt;span&gt;</strong> con texto incluido directamente. Se indica que ignore si están dentro de enlaces, botones, &lt;li&gt;, encabezados y etiquetas con el role=&quot;button&quot; o role=&quot;link&quot;, pero puede contener fallos por la complejidad de ciertas estructuras HTML.</li> 
+ <li>Si hay etiquetas <strong>&lt;div&gt; o &lt;span&gt;</strong> con texto incluido directamente. Se indica que ignore si están dentro de enlaces, botones, &lt;li&gt;, encabezados y etiquetas con el role=&quot;button&quot; o role=&quot;link&quot;, pero puede contener fallos por la complejidad de ciertas estructuras HTML. En la lista se genera un pequeño fragmento del código para que sea más fácil localizar el error o comprobarlo.</li> 
  <li>Si hay etiquetas <strong>&lt;i&gt;</strong> y si ellas tienen el atributo <strong>aria-hidden=&quot;true&quot;</strong>.</li>
  <li>Si hay encabezados vacíos.</li>
  <li>Si hay encabezados vacíos dentro de tablas.</li>
