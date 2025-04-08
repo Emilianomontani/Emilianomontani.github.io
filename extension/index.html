@@ -11,25 +11,39 @@
 <body>
 <div class="container">
 <h2><strong>Hola!</strong></h2>
-<h1>Extensión para verificar los errores básicos del criterio 1.3.1 Información y relaciones.</h1>
-<p>Esta aplicación está en fase beta. Puede contener fallos puntuales en los resultados lanzados. Se debe realizar una comprobación manual para verificar el contenido. </p>
-<p>Se aplica un rol de estado para que la lista se anuncie a las personas usuarias que navegan con productos de apoyo. La extensión es funcional navegando con teclado e incluye un foco visible y un contraste de más de 4,5:1 en todos sus textos y elementos interactivos.</p>
-<p>La opción para visualizar los errores en la página, colorea todos los errores de una vez, excepto los que están ocultos visualmente. Para ello aplica la clase "resaltado-error" y está se puede buscar en el código mediante el inspector para localizar los errores o etiquetas que no son visibles. Por otro lado este resaltado, dependiendo el fondo del elemento puede no cumplir constraste.</p>
+<h1>Esta extensión está diseñada para verificar automáticamente errores básicos relacionados con el criterio 1.3.1 (Información y Relaciones) de las WCAG.</h1>
+<h2>Importante: <strong>Fase beta</strong></h2>
+    <p>Por favor, ten en cuenta que esta aplicación se encuentra en fase beta. Los resultados generados podrían contener imprecisiones. Se recomienda realizar una verificación manual para confirmar la validez de los errores detectados.</p>
+<h2>Características de Accesibilidad de la Extensión:</h2>
+    <ul>
+        <li>Se aplica un role="status" al contenedor de la lista de errores para asegurar que se anuncie correctamente a usuarios de lectores de pantalla y otras tecnologías de asistencia.
+            </li>
+        <li>La extensión es totalmente funcional mediante navegación con teclado, incorporando un indicador de foco visible y un contraste de color superior a 4.5:1 en todos sus textos y elementos interactivos.
+            </li>
+    </ul>
+<h2>Visualización de Errores en la Página:</h2>
+    <p>La opción para visualizar los errores colorea todos los elementos problemáticos de una vez (excepto aquellos que están visualmente ocultos). Para lograr esto, se aplica la clase CSS "resaltado-error". Puedes utilizar el inspector de elementos de tu navegador para buscar esta clase en el código fuente y localizar los errores o etiquetas no visibles. Advertencia: El contraste del resaltado aplicado podría no cumplir con las WCAG dependiendo del color de fondo del elemento original.</p>
+<h2>verificaciones realizadas</h2>
+    <p>La extensión actualmente verifica los siguientes aspectos:</p>
 <ul>
  <li>Verifica si hay párrafos vacíos o con &quot; -&nbsp- &quot;.</li>
  <li>Si hay etiquetas con <strong>&lt;b&gt;, &lt;u&gt;, &lt;small&gt;, &lt;br&gt;, &lt;Font&gt;</strong>.</li>
- <li>Si hay etiquetas <strong>&lt;div&gt; o &lt;span&gt;</strong> con texto incluido directamente. Se indica que ignore si están dentro de enlaces, botones, &lt;li&gt;, encabezados y etiquetas con el role=&quot;button&quot; o role=&quot;link&quot;, pero puede contener fallos por la complejidad de ciertas estructuras HTML. En la lista se genera un pequeño fragmento del código para que sea más fácil localizar el error o comprobarlo.</li> 
+ <li>Si hay etiquetas <strong>&lt;div&gt; o &lt;span&gt;</strong> con texto incluido directamente. Se indica que ignore si están dentro de enlaces, botones, &lt;li&gt;, encabezados y etiquetas con el role=&quot;button&quot; role=&quot;link&quot; etc. <em>Nota: </em>Debido a la complejidad de ciertas estructuras HTML, podrían existir falsos positivos. Se incluye un fragmento del código del elemento detectado en la lista de errores para facilitar su localización y comprobación.</li> 
  <li>Si hay etiquetas <strong>&lt;i&gt;</strong> y si ellas tienen el atributo <strong>aria-hidden=&quot;true&quot;</strong>.</li>
  <li>Si hay encabezados vacíos.</li>
  <li>Si hay encabezados vacíos dentro de tablas.</li>
  <li>Si hay más de un encabezado <strong>&lth1&gt;</strong>.</li>
  <li>si hay listas vacías <strong>&lt;ul&gt; o &lt;ol&gt;.</strong></li>
 </ul>
-<p>Los errores se imprimen mediante un encabezado, un texto con el valor númerico de los errores encontrados y luego una lista detallada de errores. En muchos casos, esta lista puede ser extensa y repetitiva, pero fue la manera que encontré para que los errores se resaltaran correctamente en el código.</p>
-<p>Para conocer más sobre este criterio o sobre las WCAG en general: <strong><a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships">Criterio 1.3.1 (WCAG2.2)</a></strong></p>
-<p>Esta extensión está en desarrollo. Es fundamental que la prueben y si detectan falsos positivos me envien comentarios para posibles actualizaciones con esas mejoras.</p> 
-<p>Para comentarios, recomendaciones o errores: <strong>emilianomontani@gmail.com</strong></p>
-<p>Espero que te sirva en el día a día y muchas gracias.</p>
+<h2>Presentación de los Resultados:</h2>
+    <p>Los errores detectados se presentan con un encabezado descriptivo de la verificación realizada, seguido de un texto que indica la cantidad total de errores encontrados para esa categoría y una lista detallada de cada error individual. <em>Nota: En algunos casos, la lista de errores puede ser extensa y repetitiva debido a la forma en que se implementa el resaltado visual en el código.</em></p>
+<h2>Más Información sobre el Criterio 1.3.1 y las WCAG:</h2>
+    <p>Para obtener más detalles sobre este criterio y las Pautas de Accesibilidad para el Contenido Web (WCAG) en general, puedes consultar: <strong><a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships">Criterio 1.3.1 (WCAG2.2)</a></strong></p>
+<h2>¡Tu Feedback es Valioso!</h2>
+    <p>Esta extensión se encuentra en desarrollo activo. Te agradecería enormemente que la probaras exhaustivamente y me enviaras cualquier comentario sobre falsos positivos o sugerencias de mejora para futuras actualizaciones.</p> 
+<h2>Contacto para Comentarios y Errores:</h2>
+    <p>Si tienes comentarios, recomendaciones o encuentras algún error, por favor, no dudes en contactarme a través de: <strong>emilianomontani@gmail.com</strong></p>
+    <p>¡Espero que esta herramienta te sea útil en tu trabajo diario! Muchas gracias por tu colaboración :)</p>
 </div>  
 </body>
 </html>
