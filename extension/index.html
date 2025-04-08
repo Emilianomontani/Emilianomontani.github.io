@@ -11,9 +11,10 @@
 <body>
 <div class="container">
 <h2><strong>Hola!</strong></h2>
-<h1>Extensión para verificar errores básicos del criterio 1.3.1 Información y relaciones.</h1>
+<h1>Extensión para verificar los errores básicos del criterio 1.3.1 Información y relaciones.</h1>
 <p>Esta aplicación está en fase beta. Puede contener fallos puntuales en los resultados lanzados. Se debe realizar una comprobación manual para verificar el contenido. </p>
 <p>Se aplica un rol de estado para que la lista se anuncie a las personas usuarias que navegan con productos de apoyo. La extensión es funcional navegando con teclado e incluye un foco visible y un contraste de más de 4,5:1 en todos sus textos y elementos interactivos.</p>
+<p>La opción para visualizar los errores en la página, colorea todos los errores de una vez, excepto los que están ocultos visualmente. Para ello aplica la clase "resaltado-error" y está se puede buscar en el código mediante el inspector para localizar los errores o etiquetas que no son visibles. Por otro lado este resaltado, dependiendo el fondo del elemento puede no cumplir constraste.</p>
 <ul>
  <li>Verifica si hay párrafos vacíos o con &quot; -&nbsp- &quot;.</li>
  <li>Si hay etiquetas con <strong>&lt;b&gt;, &lt;u&gt;, &lt;small&gt;, &lt;br&gt;, &lt;Font&gt;</strong>.</li>
@@ -24,7 +25,9 @@
  <li>Si hay más de un encabezado <strong>&lth1&gt;</strong>.</li>
  <li>si hay listas vacías <strong>&lt;ul&gt; o &lt;ol&gt;.</strong></li>
 </ul>
+<p>Los errores se imprimen mediante un encabezado, un texto con el valor númerico de los errores encontrados y luego una lista detallada de errores. En muchos casos, esta lista puede ser extensa y repetitiva, pero fue la manera que encontré para que los errores se resaltaran correctamente en el código.</p>
 <p>Para conocer más sobre este criterio o sobre las WCAG en general: <strong><a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships">Criterio 1.3.1 (WCAG2.2)</a></strong></p>
+<p>Esta extensión está en desarrollo. Es fundamental que la prueben y si detectan falsos positivos me envien comentarios para posibles actualizaciones con esas mejoras.</p> 
 <p>Para comentarios, recomendaciones o errores: <strong>emilianomontani@gmail.com</strong></p>
 <p>Espero que te sirva en el día a día y muchas gracias.</p>
 </div>  
