@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmarklet: WCAG 2.5.8 Touch Target</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    a.bookmarklet {
+      display: inline-block;
+      background: #004080;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: 2px white solid;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+    a.bookmarklet:hover {
+      background: #ffffff;
+      color:  #004080;
+      padding: 0.5rem 1rem;
+      border: 2px  #004080 solid;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bookmarklet para evaluar el criterio WCAG 2.5.8 (Tamaño de Objetivo)</h1>
+  <p>
+    Arrastrá este botón a tu barra de marcadores. Luego, al visitar un sitio web, hacé clic en el marcador para visualizar un círculo de 24px alrededor de todos los elementos interactivos menores a 24px (tomando en cuenta el área cliqueable). 
+    De esta forma se puede evaluar si estos círculos se superponen unos con otros.  
+    El círculo tiene borde rojo por dentro y borde blanco por fuera para garantizar visibilidad en cualquier color de fondo.
+  </p>
 
+  <a class="bookmarklet" href="javascript:(function(){const m=24;const c=24;document.querySelectorAll('.target-circle-overlay').forEach(e=>e.remove());document.querySelectorAll('a[href],button,input,textarea,select,[tabindex]:not([tabindex=\&quot;-1\&quot;])').forEach(el=>{const r=el.getBoundingClientRect();const w=r.width;const h=r.height;if(w<m||h<m){const o=document.createElement('div');o.className='target-circle-overlay';o.style.position='absolute';o.style.top=`${window.scrollY+r.top+h/2-c/2}px`;o.style.left=`${window.scrollX+r.left+w/2-c/2}px`;o.style.width=`${c}px`;o.style.height=`${c}px`;o.style.border='2px dashed red';o.style.borderRadius='50%';o.style.pointerEvents='none';o.style.zIndex='9999';document.body.appendChild(o);const ow=document.createElement('div');ow.className='target-circle-overlay';ow.style.position='absolute';ow.style.top=`${window.scrollY+r.top+h/2-(c+4)/2}px`;ow.style.left=`${window.scrollX+r.left+w/2-(c+4)/2}px`;ow.style.width=`${c+4}px`;ow.style.height=`${c+4}px`;ow.style.border='2px dashed white';ow.style.borderRadius='50%';ow.style.pointerEvents='none';ow.style.zIndex='9998';document.body.appendChild(ow);}});})();">WCAG 2.5.8</a>
+
+  <p>
+    También podés hacer clic derecho y seleccionar "Guardar este enlace como marcador" si estás en móvil o no podés arrastrarlo.
+  </p>
+</body>
+</html>
