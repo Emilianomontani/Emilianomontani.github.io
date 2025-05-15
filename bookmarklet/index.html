@@ -34,7 +34,17 @@
       text-decoration: none;
       font-weight: bold;
       margin-top: 1rem;
+
+      a.link-book{
+        text-decoration:underline;
+        font-weight: normal;
     }
+
+        a.link-book:hover{
+        text-decoration:none;
+        font-weight: bold;
+    }
+      
   </style>
 </head>
 <body>
@@ -45,7 +55,7 @@
     El círculo tiene borde rojo por dentro y borde blanco por fuera para garantizar visibilidad en cualquier color de fondo.
   </p>
 
-  <p>Nota: En algunas pantallas, puede incluir elementos ocultos o que, al hacer scroll, no queden fijos. Esto depende la forma de maquetación del sitio.</p>
+  <p><strong>Nota: </strong>En algunas pantallas, puede incluir elementos ocultos o que, al hacer scroll, no queden fijos. Esto depende la forma de maquetación del sitio.</p>
 
   <a class="bookmarklet" href="javascript:(function(){var m=24,c=24,n='target-circle-overlay',v=window,d=document,q=d.querySelectorAll.bind(d),l=localStorage,k='myBookmarklet_isVisible';function isVisible(el){while(el&&el.nodeType===1){var style=getComputedStyle(el);if(style.display==='none'||style.visibility==='hidden')return false;el=el.parentNode;}return true;}if(l.getItem(k)==='true'){q('.'+n).forEach(function(e){e.remove();});l.setItem(k,'false');}else{q('a[href],button,input,textarea,select,[tabindex]:not([tabindex=\&quot;-1\&quot;])').forEach(function(el){var t=el.getBoundingClientRect(),w=t.width,h=t.height;if(w<m||h<m){if(isVisible(el)){var o=d.createElement('div');o.className=n;o.style.position='absolute';o.style.top=(v.scrollY+t.top+h/2-c/2)+'px';o.style.left=(v.scrollX+t.left+w/2-c/2)+'px';o.style.width=c+'px';o.style.height=c+'px';o.style.border='2px dashed red';o.style.borderRadius='50%';o.style.pointerEvents='none';o.style.zIndex='9999';d.body.appendChild(o);var u=d.createElement('div');u.className=n;u.style.position='absolute';u.style.top=(v.scrollY+t.top+h/2-(c+4)/2)+'px';u.style.left=(v.scrollX+t.left+w/2-(c+4)/2)+'px';u.style.width=(c+4)+'px';u.style.height=(c+4)+'px';u.style.border='2px dashed white';u.style.borderRadius='50%';u.style.pointerEvents='none';u.style.zIndex='9998';d.body.appendChild(u);}}});l.setItem(k,'true');}})()">WCAG (2.5.8)</a>
  
@@ -53,6 +63,6 @@
     También podés hacer clic derecho y seleccionar "Guardar este enlace como marcador" si estás en móvil o no podés arrastrarlo.
   </p>
 
-  <p>Más información: <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum" >Target Size Minimum</a></p>
+  <p>Más información: <a class="link-book" href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum" >Target Size Minimum</a></p>
 </body>
 </html>
