@@ -66,7 +66,13 @@
     }
 
     .list_items{
-      
+      border: 1px solid #004080;
+      padding: 1.6rem;
+    }
+
+    .list_items li{
+      margin-bottom: 1.2rem;
+    list-style-type: square;
     }
       
   </style>
@@ -80,8 +86,8 @@
     De esta forma se puede evaluar si estos círculos se superponen unos con otros. 
     El círculo tiene borde rojo y puede no contrastar en algunos colores de fondo.
   </p>  
-  <p><strong>Actualización: </strong>
-    <ul class="list_items">
+  <h2 id="id_head"><strong>Actualización: </strong></h2>
+    <ul aria-labelledby="id_head" class="list_items">
       <li>Se agrega una línea punteada blanco y negro por la parte superior e inferior de los círculos para mejorar la detección visual de la alineación y proximidad de los objetivos.</li>
       <li>Se incluye un cartel de alerta para notificar la cantidad de controles superpuestos. Esto puede variar dependiendo del zoom de la pantalla o la versión. Se debe revisar en varios tamaños de pantalla</li>
       <li>Se agrega una función para evaluar enlaces y botones con imágenes dentro tomando en cuenta el tamaño de la imagen como área cliqueable</li>
@@ -97,16 +103,19 @@ href="javascript:%28function%28%29%7Bvar%20m%3D24%2Cn%3D%27target-circle-overlay
     También podés hacer clic derecho y seleccionar "Guardar este enlace como marcador" si estás en móvil o no podés arrastrarlo.
   </p>
 
+   <p>Más información: <a class="link-book" href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum" >2.5.8 Target Size Minimum</a></p>
+<hr>
 <h2>Criterio 2.5.5 Target Size (Enhanced) </h2>
 <p>Este es un extra para revisar los elementos menores de 44px por 44px si se desea. En este caso, no analiza colisiones, simplemente marca todos los elementos menores</p>
     <a class="bookmarklet_2"
 href="javascript:%28function%28%29%7Bvar%20m%3D44%3Bvar%20n%3D%27target-circle-overlay%27%3Bvar%20v%3Dwindow%3Bvar%20d%3Ddocument%3Bvar%20q%3Dd.querySelectorAll.bind%28d%29%3Bvar%20l%3DlocalStorage%3Bvar%20k%3D%27myBookmarklet_isVisible%27%3Bfunction%20isVisible%28el%29%7Bwhile%28el%26%26el.nodeType%3D%3D%3D1%29%7Bvar%20s%3DgetComputedStyle%28el%29%3Bif%28s.display%3D%3D%3D%27none%27%7C%7Cs.visibility%3D%3D%3D%27hidden%27%29%20return%20false%3Bel%3Del.parentNode%3B%7Dreturn%20true%3B%7Dif%28l.getItem%28k%29%3D%3D%3D%27true%27%29%7Bq%28%27.%27%2Bn%29.forEach%28function%28e%29%7Be.remove%28%29%3B%7D%29%3Bl.setItem%28k%2C%27false%27%29%3B%7Delse%7Bvar%20smallElementsCount%20%3D%200%3Bq%28%27a%5Bhref%5D%2Cbutton%2Cinput%2Ctextarea%2Cselect%2C%5Btabindex%5D%3Anot%28%5Btabindex%3D%5C%27-1%5C%27%5D%29%27%29.forEach%28function%28el%29%7Bvar%20t%3Del.getBoundingClientRect%28%29%3Bvar%20w%3Dt.width%3Bvar%20h%3Dt.height%3Bvar%20skip%3Dfalse%3Bif%28%28el.tagName%3D%3D%3D%27A%27%7C%7Cel.tagName%3D%3D%3D%27BUTTON%27%29%29%7Bvar%20imgs%3Del.querySelectorAll%28%27img%27%29%3Bif%28imgs.length%3D%3D%3D1%29%7Bvar%20img%3Dimgs%5B0%5D%3Bvar%20ir%3Dimg.getBoundingClientRect%28%29%3Bif%28ir.width%3E%3Dm%20%26%26%20ir.height%3E%3Dm%20%26%26%20isVisible%28img%29%29%7Bskip%3Dtrue%3B%7D%7D%7Dif%28%28w%3Cm%7C%7Ch%3Cm%29%26%26%21skip%29%7Bif%28isVisible%28el%29%29%7BsmallElementsCount%2B%2B%3Bvar%20cx%3Dv.scrollX%2Bt.left%2Bw%2F2%3Bvar%20cy%3Dv.scrollY%2Bt.top%2Bh%2F2%3Bvar%20o%3Dd.createElement%28%27div%27%29%3Bo.className%3Dn%3Bo.style.position%3D%27absolute%27%3Bo.style.top%3D%28cy-m%2F2%29%2B%27px%27%3Bo.style.left%3D%28cx-m%2F2%29%2B%27px%27%3Bo.style.width%3Dm%2B%27px%27%3Bo.style.height%3Dm%2B%27px%27%3Bo.style.border%3D%272px%20dashed%20orange%27%3Bo.style.borderRadius%3D%2750%25%27%3Bo.style.pointerEvents%3D%27none%27%3Bo.style.zIndex%3D%279999%27%3Bd.body.appendChild%28o%29%3B%7D%7D%7D%29%3Balert%28%27Cantidad%20de%20elementos%20menores%20a%20%27%2Bm%2B%27px%3A%20%27%2BsmallElementsCount%29%3Bl.setItem%28k%2C%27true%27%29%3B%7D%7D%29%28%29"
 >WCAG (2.5.5) AAA</a>
 
-  <p>Más información: <a class="link-book" href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum" >Target Size Minimum</a></p>
+ <p>Más información: <a class="link-book" href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced" >2.5.5 Target Size (Enhanced) (Level AAA)</a></p>
   <hr>
   <h2>Contacto para Comentarios y Errores:</h2>
     <p>Si tienes comentarios, recomendaciones o encuentras algún error, por favor, no dudes en contactarme a través de: <strong>emilianomontani@gmail.com</strong></p>
-    <p>¡Espero que esta herramienta te sea útil en tu trabajo diario! Muchas gracias por tu colaboración :)</p>
+    <p>El código se puede modificar y mejorar. Si hacés alguna mejora, me alegraré de probarla</p>
+  <p>¡Espero que esta herramienta te sea útil en tu trabajo diario! Muchas gracias por tu colaboración :)</p>
 </body>
 </html>
