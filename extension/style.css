@@ -1,8 +1,8 @@
 body {
-    background-color: rgb(241, 239, 236);
+    background-color: #f7f4eb;
     display: flex;
     flex-direction: column;
-    font-family: "Segoe UI", Tahoma, sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     margin-left: auto;
     margin-right: auto;
@@ -10,18 +10,23 @@ body {
     width:65%;
 }
 
-h1 {border-bottom: 4px rgb(92, 20, 125) solid;
-    color: rgb(92, 20, 125);
-    margin-top: -0.5rem;
+h1 {border-bottom: 3px #242121 solid;
+    color: #242121;;
+    margin-top: 0.9rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
 }
 
-h2 {border-bottom: 3px rgb(65 21 196) solid;
-    color: rgb(65 21 196);
-    font-size: 1.2rem;
+h2 {border-bottom: 2px #242121 solid;
+    color: #242121;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 2rem;
    }
 
-ul {border-bottom: 3px rgb(92, 20, 125) solid;
-    border-top: 2px rgb(92, 20, 125) solid;
+ul {
     margin-top: 0.1rem;
     padding: 0.6rem 1rem 0.6rem 2rem;
 }
@@ -30,17 +35,28 @@ li {
     margin-bottom: 0.5rem;
 }
 
+.box_link{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #242121;
+    padding: 0.5rem;
+}
+
 a{
-    color: rgb(92, 20, 125);
+    color: #242121;
 }
 
 a:hover{
-    color: rgb(92, 20, 125);
+    color: #242121;
     text-decoration: none;
 }
 
 a:visited{
-    color: rgb(92, 20, 125);
+    color: #242121;
     text-decoration: none;
 }
 
@@ -50,18 +66,30 @@ a:focus{
 
 .btn_link{
     display: inline-block;
-    border: 2px solid rgb(92, 20, 125);
-    background-color: rgb(92, 20, 125);
-    color: white;
-    padding: 0.4rem 2rem 0.7rem 2rem;
-    border-radius: 3rem;    
+    border: 2px solid #242121;
+    background-color: #242121;
+    color: #f7f4eb;
+    width: 40%;
+    text-align: center;
+    padding: 0.5rem 2.2rem 0.8rem 2.2rem;    
 }
 
 .btn_link:hover{
-    border: 2px solid rgb(92, 20, 125);
-    background-color: rgb(241, 239, 236);
-    color: rgb(92, 20, 125);
+    border: 2px solid #242121;
+    background-color: #f7f4eb;
+    color: #242121;
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    body {
+    width:80%;
+    }
+
+    .box_link{
+    text-align: center;
+    padding: 0.5rem;
+    }
 }
 
 
