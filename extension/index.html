@@ -4,52 +4,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verificador WCAG Anotaciones y comentarios de la extensión</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="author" content="Emiliano Montani">
+    <title>Semántica 1.3.1 Extensión</title>
+    <link rel="stylesheet" type="text/css" href="style-semantica.css">
     <link rel="icon" href="icon48.png" type="image/png">
 </head>
 
 <body>
-<div class="container">
-<h2><strong>Hola!</strong></h2>
-<h1>Esta extensión está diseñada para verificar automáticamente errores básicos relacionados con el criterio 1.3.1 (Información y Relaciones) de las WCAG.</h1>
+    <div class="container">
+        <h2><strong>SEMANTICA</strong></h2>
+        <h1>Verificador de estructura semántica para el criterio 1.3.1 de las WCAG</h1>
 
-<p>Al presionar sobre el enlace, la extensión se descarga automáticamente.</p>
-<p>El peso de la extensión es de 140kb y está comprimida en formato zip</p>    
-<a class="btn_link" href="https://emilianomontani.github.io/extension/extension_emi_1.3.1.zip">Descargar Extensión</a>
-    
-<h2>Importante: <strong>Fase beta</strong></h2>
-    <p>Por favor, ten en cuenta que esta aplicación se encuentra en fase beta. Los resultados generados podrían contener imprecisiones. Se recomienda realizar una verificación manual para confirmar la validez de los errores detectados.</p>
-<h2>Características de Accesibilidad de la Extensión:</h2>
-    <ul>
-        <li>Se aplica un role="status" al contenedor de la lista de errores para asegurar que se anuncie correctamente a usuarios de lectores de pantalla y otras tecnologías de asistencia.
+        <img src="semantica_1.png" alt="" style="width: 20%; border: 2px solid black">
+
+        <p>Esta extensión evalúa automáticamente estructuras comunes que infringen el criterio 1.3.1:
+            Información y Relaciones de las <a href="https://www.w3.org/WAI/WCAG22/Understanding/">WCAG 2.2</a>,
+            facilitando la identificación de elementos que podrían
+            afectar la interpretación semántica del contenido por parte de tecnologías de asistencia.</p>
+
+        <div class="box_link">
+            <p>Al presionar sobre el enlace, la extensión se descarga automáticamente.</p>
+            <a class="btn_link" href="https://emilianomontani.github.io/extension/extension_emi_1.3.1.zip">Descargar
+                Extensión</a>
+            <p>La extensión pesa 140 KB y se distribuye en formato .zip. Solo es necesario descomprimir e instalarla
+                manualmente desde chrome://extensions.</p>
+        </div>
+
+        <h2>Importante: <strong>Fase beta</strong></h2>
+        <p>Esta es una versión en desarrollo activo.
+            Si bien ofrece resultados útiles, podrían producirse falsos positivos o interpretaciones parciales.
+            Se recomienda verificación manual adicional como respaldo. Se recomienda realizar una verificación manual
+            para confirmar la validez de los errores detectados.</p>
+
+        <h2>¿Qué verifica la extensión?</h2>
+        <p>La extensión detecta los siguientes errores semánticos comunes:</p>
+        <ul>
+            <li>Si hay etiquetas <strong>&lt;div&gt; o &lt;span&gt;</strong> con texto directo no semántico,
+                ignorando los que están dentro de enlaces, botones, listas o con roles apropiados.
+                <em>Nota: </em>Debido a la complejidad de ciertas estructuras HTML, podrían existir
+                falsos positivos.
             </li>
-        <li>La extensión es totalmente funcional mediante navegación con teclado, incorporando un indicador de foco visible y un contraste de color superior a 4.5:1 en todos sus textos y elementos interactivos.
+            <li>Verifica si hay párrafos vacíos o con " -&nbsp;- ".</li>
+            <li>Si hay etiquetas con <strong>&lt;b&gt;, &lt;u&gt;, &lt;br&gt;, &lt;font&gt;, &lt;s&gt;,
+                    &lt;small&gt;</strong>.
             </li>
-    </ul>
-<h2>Visualización de Errores en la Página:</h2>
-    <p>La opción para visualizar los errores colorea todos los elementos problemáticos de una vez (excepto aquellos que están visualmente ocultos). Para lograr esto, se aplica la clase CSS "resaltado-error". Puedes utilizar el inspector de elementos de tu navegador para buscar esta clase en el código fuente y localizar los errores o etiquetas no visibles. Advertencia: El contraste del resaltado aplicado podría no cumplir con las WCAG dependiendo del color de fondo del elemento original.</p>
-<h2>verificaciones realizadas</h2>
-    <p>La extensión actualmente verifica los siguientes aspectos:</p>
-<ul>
- <li>Verifica si hay párrafos vacíos o con &quot; -&nbsp- &quot;.</li>
- <li>Si hay etiquetas con <strong>&lt;b&gt;, &lt;u&gt;, &lt;small&gt;, &lt;br&gt;, &lt;Font&gt;</strong>.</li>
- <li>Si hay etiquetas <strong>&lt;div&gt; o &lt;span&gt;</strong> con texto incluido directamente. Se indica que ignore si están dentro de enlaces, botones, &lt;li&gt;, encabezados y etiquetas con el role=&quot;button&quot; role=&quot;link&quot; etc. <em>Nota: </em>Debido a la complejidad de ciertas estructuras HTML, podrían existir falsos positivos. Se incluye un fragmento del código del elemento detectado en la lista de errores para facilitar su localización y comprobación.</li> 
- <li>Si hay etiquetas <strong>&lt;i&gt;</strong> y si ellas tienen el atributo <strong>aria-hidden=&quot;true&quot;</strong>.</li>
- <li>Si hay encabezados vacíos.</li>
- <li>Si hay encabezados vacíos dentro de tablas.</li>
- <li>Si hay más de un encabezado <strong>&lth1&gt;</strong>.</li>
- <li>si hay listas vacías <strong>&lt;ul&gt; o &lt;ol&gt;.</strong></li>
-</ul>
-<h2>Presentación de los Resultados:</h2>
-    <p>Los errores detectados se presentan con un encabezado descriptivo de la verificación realizada, seguido de un texto que indica la cantidad total de errores encontrados para esa categoría y una lista detallada de cada error individual. <em>Nota: En algunos casos, la lista de errores puede ser extensa y repetitiva debido a la forma en que se implementa el resaltado visual en el código.</em></p>
-<h2>Más Información sobre el Criterio 1.3.1 y las WCAG:</h2>
-    <p>Para obtener más detalles sobre este criterio y las Pautas de Accesibilidad para el Contenido Web (WCAG) en general, puedes consultar: <strong><a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships">Criterio 1.3.1 (WCAG2.2)</a></strong></p>
-<h2>¡Tu Feedback es Valioso!</h2>
-    <p>Esta extensión se encuentra en desarrollo activo. Te agradecería enormemente que la probaras exhaustivamente y me enviaras cualquier comentario sobre falsos positivos o sugerencias de mejora para futuras actualizaciones.</p> 
-<h2>Contacto para Comentarios y Errores:</h2>
-    <p>Si tienes comentarios, recomendaciones o encuentras algún error, por favor, no dudes en contactarme a través de: <strong>emilianomontani@gmail.com</strong></p>
-    <p>¡Espero que esta herramienta te sea útil en tu trabajo diario! Muchas gracias por tu colaboración :)</p>
-</div>  
+            <li>Si hay etiquetas <strong>&lt;i&gt;</strong></li>
+            <li>Si hay encabezados vacíos.</li>
+            <li>Si hay más de un encabezado <strong>&lt;h1&gt;</strong>.</li>
+            <li>si hay listas vacías <strong>&lt;ul&gt; o &lt;ol&gt;.</strong></li>
+            <li>Si hay encabezados &lt;ht&gt; vacíos dentro de tablas.</li>
+        </ul>
+        <p>En cada error, se muestra un fragmento del código para facilitar su localización y revisión.</p>
+
+        <hr>
+
+        <h2>Interfaz de Resultados</h2>
+        <p>Los resultados se presentan organizados por tipo de error, dentro de bloques desplegables. Cada bloque
+            incluye:</p>
+
+        <ul>
+            <li>Un resumen con la cantidad de errores detectados para esa categoría.</li>
+            <li>Una lista detallada de errores individuales.</li>
+            <li>Enlace directo al elemento problemático en la página (si es visible, sino muestra una alerta anunciando que está oculto).</li>
+        </ul>
+
+        <img src="semantica_4.png" alt="" style="width: 35%; border: 2px solid black">
+
+        <p>También podés activar la visualización directa en la página, que resalta todos los elementos con error usando
+            colores distintos por tipo.</p>
+
+        <img src="Semantica_2.png" alt="" style="width: 55%; border: 2px solid black">
+
+        <h2>Accesibilidad de la extensión</h2>
+        <ul>
+            <li>Usa role="status" para anunciar resultados nuevos a lectores de pantalla.</li>
+            <li>Se puede utilizar completamente mediante teclado.</li>
+            <li>Incluye indicadores de foco visibles.</li>
+        </ul>
+
+        <h2>Opciones disponibles</h2>
+        <ul>
+            <li>Filtrado por tipo de error (mediante casillas de selección).</li>
+            <li>Filtrado por tipo de error (con color y etiqueta mediante Visualizar errores).</li>
+            <li>Botón para copiar los errores al portapapeles.</li>
+            <li>Botón para limpiar resultados (incluye limpieza automática al cambiar de URL en la mayoría de los
+                sitios).</li>
+        </ul>
+
+        <img src="Semantica_3.png" alt="" style="width: 20%; border: 2px solid black">
+
+        <h2>Más Información sobre el Criterio 1.3.1</h2>
+        <p>Para una explicación completa del criterio 1.3.1, consultá la documentación oficial: <strong><a
+                    href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships">Criterio 1.3.1
+                    (WCAG2.2)</a></strong></p>
+
+        <hr>
+
+        <h2>¡Tu Feedback es Valioso!</h2>
+        <p>Esta extensión se encuentra en desarrollo activo. Te agradecería enormemente que la probaras
+            y Si encontrás errores, falsos positivos o tenés sugerencias, escribime a:
+            <strong>emilianomontani@gmail.com</strong>
+        </p>
+        <p>¡Espero que esta herramienta te sea útil en tu trabajo diario! Muchas gracias por tu colaboración</p>
+    </div>
+
+
 </body>
+
 </html>
