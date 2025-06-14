@@ -11,104 +11,217 @@
 </head>
 
 <body>
-    <div class="container">
-        <h2><strong>SEMANTICA</strong></h2>
-        <h1>Verificador de estructura semántica para el criterio 1.3.1 de las WCAG</h1>
+        <div class="container">
+            <h2><strong>SEMANTICA</strong></h2>
+            <h1>Verificador de estructura semántica para el criterio 1.3.1 de las WCAG</h1>
 
-        <img src="semantica_1.png" alt="" style="width: 20%; border: 2px solid black">
+            <details class="desplegable">
+                    <summary>
+                        <span class="icono" aria-hidden="true"></span>
+                        English versión
+                        <span class="sr-only">Expand to view content and information</span>
+                    </summary>
+                    <div>
+                        <p>This extension automatically evaluates common structures that violate <a href="https://www.w3.org/WAI/WCAG22/Understanding/">WCAG 2.2</a>,
+                            criterion 1.3.1: Info and Relationships, helping identify elements that may interfere with assistive technologies' interpretation of page semantics.</p>
 
-        <p>Esta extensión evalúa automáticamente estructuras comunes que infringen el criterio 1.3.1:
-            Información y Relaciones de las <a href="https://www.w3.org/WAI/WCAG22/Understanding/">WCAG 2.2</a>,
-            facilitando la identificación de elementos que podrían
-            afectar la interpretación semántica del contenido por parte de tecnologías de asistencia.</p>
+                        <div class="box_link">
+                            <p>By clicking the download link, the extension is automatically downloaded.</p>
+                            <a class="btn_link"
+                                href="https://emilianomontani.github.io/extension/extension_emi_1.3.1.zip">Download Extension</a>
+                            <p>The extension weighs only 140 KB and is distributed in .zip format. Simply unzip and install it manually from chrome://extensions.</p>
+                        </div>
 
-        <div class="box_link">
-            <p>Al presionar sobre el enlace, la extensión se descarga automáticamente.</p>
-            <a class="btn_link" href="https://emilianomontani.github.io/extension/extension_emi_1.3.1.zip">Descargar
-                Extensión</a>
-            <p>La extensión pesa 140 KB y se distribuye en formato .zip. Solo es necesario descomprimir e instalarla
-                manualmente desde chrome://extensions.</p>
+                        <h2>Important: <strong>Beta stage</strong></h2>
+                        <p>This is an actively developed beta version. While it provides useful results, false positives or partial interpretations may occur. Manual verification is strongly recommended to validate the reported issues.</p>
+
+                        <img src="semantica_1.png" alt=""
+                            style="width: 35%; border: 2px solid black; display: flex; margin-left: auto; margin-right: auto;">
+
+                        <h2>What Does the Extension Check?</h2>
+                        <p>This tool detects common semantic issues, including:</p>
+                        <ul>
+                            <li>Non-semantic text directly inside <strong>&lt;div&gt; or &lt;span&gt;</strong> tags, excluding those inside links, buttons, lists, or with appropriate roles.
+                                <em>Note: </em>Due to complex HTML structures, some false positives may occur.
+                            </li>
+                            <li>Empty paragraphs or those containing " -&nbsp;- ".</li>
+                            <li>Deprecated or non-semantic tags, such as <strong>&lt;b&gt;, &lt;u&gt;, &lt;br&gt;, &lt;font&gt;, &lt;s&gt;,
+                                    &lt;small&gt;</strong>.
+                            </li>
+                            <li>Presence of <strong>&lt;i&gt;</strong> tags</li>
+                            <li>Empty heading tags.</li>
+                            <li>Multiple <strong>&lt;h1&gt;</strong> headings on a single page.</li>
+                            <li>Empty list containers: <strong>&lt;ul&gt; or &lt;ol&gt;.</strong></li>
+                            <li>Empty &lt;ht&gt; headers inside tables.</li>
+                        </ul>
+                        <p>Each error includes a small code snippet to help you locate and inspect the problematic element.</p>
+
+                        <hr>
+
+                        <h2>Results Interface</h2>
+                        <p>Results are grouped by error type, each within a collapsible block. Every block includes:</p>
+
+                        <ul>
+                            <li>A summary with the number of errors found.</li>
+                            <li>A detailed list of individual issues.</li>
+                            <li>A direct link to the element on the page (if visible — otherwise, an alert will indicate it's hidden).</li>
+                        </ul>
+
+                        <img src="semantica_4.png" alt=""
+                            style="width: 35%; border: 2px solid black; display: flex; margin-left: auto; margin-right: auto;">
+
+                        <p>You can also activate in-page visualization, which highlights all problematic elements using color-coded styles based on the error type.</p>
+
+                        <img src="Semantica_2.png" alt=""
+                            style="width: 35%; border: 2px solid black; display: flex; margin-left: auto; margin-right: auto;">
+
+                        <h2>Extension Accessibility Features</h2>
+                        <ul>
+                            <li>Uses role="status" to notify screen readers of updated results.</li>
+                            <li>Fully operable via keyboard navigation.</li>
+                            <li>Includes visible focus indicators.</li>
+                        </ul>
+
+                        <h2>Additional Options</h2>
+                        <ul>
+                            <li>Filter results by error type using checkboxes.</li>
+                            <li>Filter by highlighted color and label using the "Highlight errors" option.</li>
+                            <li>Copy results to clipboard.</li>
+                            <li>Clear results with a button (auto-clears when the URL changes on most sites).</li>
+                        </ul>
+
+                        <img src="Semantica_3.png" alt=""
+                            style="width: 35%; border: 2px solid black; display: flex; margin-left: auto; margin-right: auto;">
+
+                        <h2>More on WCAG 2.2 – Criterion 1.3.1</h2>
+                        <p>For a complete explanation of this WCAG criterion, visit the official documentation: <strong><a
+                                    href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships">Criterio 1.3.1
+                                    (WCAG2.2)</a></strong></p>
+
+                        <hr>
+
+                        <h2> Your Feedback Is Valuable!</h2>
+                        <p>This extension is under active development.
+                            If you find bugs, false positives, or have suggestions for improvements, please send your feedback to:
+                            <strong>emilianomontani@gmail.com</strong>
+                        </p>
+                        <p>I hope this tool helps you in your daily work.
+                        "Muchas gracias" for your support and collaboration!</p>
+                    </div>
+            </details>
+
+
+            <details open class="desplegable">
+                <summary>
+                    <span class="icono" aria-hidden="true"></span>
+                    Versión Castellano
+                    <span class="sr-only">Desplegar para ver el contenido e información</span>
+                </summary>
+                    <div>
+                        <p>Esta extensión evalúa automáticamente estructuras comunes que infringen el criterio 1.3.1:
+                            Información y Relaciones de las <a href="https://www.w3.org/WAI/WCAG22/Understanding/">WCAG 2.2</a>,
+                            facilitando la identificación de elementos que podrían
+                            afectar la interpretación semántica del contenido por parte de tecnologías de asistencia.</p>
+
+                        <div class="box_link">
+                            <p>Al presionar sobre el enlace, la extensión se descarga automáticamente.</p>
+                            <a class="btn_link"
+                                href="https://emilianomontani.github.io/extension/extension_emi_1.3.1.zip">Descargar
+                                Extensión</a>
+                            <p>La extensión pesa 140 KB y se distribuye en formato .zip. Solo es necesario descomprimir e
+                                instalarla
+                                manualmente desde chrome://extensions.</p>
+                        </div>
+
+                        <h2>Importante: <strong>Fase beta</strong></h2>
+                        <p>Esta es una versión en desarrollo activo.
+                            Si bien ofrece resultados útiles, podrían producirse falsos positivos o interpretaciones parciales.
+                            Se recomienda verificación manual adicional como respaldo. Se recomienda realizar una verificación
+                            manual
+                            para confirmar la validez de los errores detectados.</p>
+
+                        <img src="semantica_1.png" alt=""
+                            style="width: 35%; border: 2px solid black; display: flex; margin-left: auto; margin-right: auto;">
+
+                        <h2>¿Qué verifica la extensión?</h2>
+                        <p>La extensión detecta los siguientes errores semánticos comunes:</p>
+                        <ul>
+                            <li>Si hay etiquetas <strong>&lt;div&gt; o &lt;span&gt;</strong> con texto directo no semántico,
+                                ignorando los que están dentro de enlaces, botones, listas o con roles apropiados.
+                                <em>Nota: </em>Debido a la complejidad de ciertas estructuras HTML, podrían existir
+                                falsos positivos.
+                            </li>
+                            <li>Verifica si hay párrafos vacíos o con " -&nbsp;- ".</li>
+                            <li>Si hay etiquetas con <strong>&lt;b&gt;, &lt;u&gt;, &lt;br&gt;, &lt;font&gt;, &lt;s&gt;,
+                                    &lt;small&gt;</strong>.
+                            </li>
+                            <li>Si hay etiquetas <strong>&lt;i&gt;</strong></li>
+                            <li>Si hay encabezados vacíos.</li>
+                            <li>Si hay más de un encabezado <strong>&lt;h1&gt;</strong>.</li>
+                            <li>si hay listas vacías <strong>&lt;ul&gt; o &lt;ol&gt;.</strong></li>
+                            <li>Si hay encabezados &lt;ht&gt; vacíos dentro de tablas.</li>
+                        </ul>
+                        <p>En cada error, se muestra un fragmento del código para facilitar su localización y revisión.</p>
+
+                        <hr>
+
+                        <h2>Interfaz de Resultados</h2>
+                        <p>Los resultados se presentan organizados por tipo de error, dentro de bloques desplegables. Cada
+                            bloque
+                            incluye:</p>
+
+                        <ul>
+                            <li>Un resumen con la cantidad de errores detectados para esa categoría.</li>
+                            <li>Una lista detallada de errores individuales.</li>
+                            <li>Enlace directo al elemento problemático en la página (si es visible, sino muestra una alerta
+                                anunciando que está oculto).</li>
+                        </ul>
+
+                        <img src="semantica_4.png" alt=""
+                            style="width: 35%; border: 2px solid black; display: flex; margin-left: auto; margin-right: auto;">
+
+                        <p>También podés activar la visualización directa en la página, que resalta todos los elementos con
+                            error usando
+                            colores distintos por tipo.</p>
+
+                        <img src="Semantica_2.png" alt=""
+                            style="width: 35%; border: 2px solid black; display: flex; margin-left: auto; margin-right: auto;">
+
+                        <h2>Accesibilidad de la extensión</h2>
+                        <ul>
+                            <li>Usa role="status" para anunciar resultados nuevos a lectores de pantalla.</li>
+                            <li>Se puede utilizar completamente mediante teclado.</li>
+                            <li>Incluye indicadores de foco visibles.</li>
+                        </ul>
+
+                        <h2>Opciones disponibles</h2>
+                        <ul>
+                            <li>Filtrado por tipo de error (mediante casillas de selección).</li>
+                            <li>Filtrado por tipo de error (con color y etiqueta mediante Visualizar errores).</li>
+                            <li>Botón para copiar los errores al portapapeles.</li>
+                            <li>Botón para limpiar resultados (incluye limpieza automática al cambiar de URL en la mayoría de
+                                los
+                                sitios).</li>
+                        </ul>
+
+                        <img src="Semantica_3.png" alt=""
+                            style="width: 35%; border: 2px solid black; display: flex; margin-left: auto; margin-right: auto;">
+
+                        <h2>Más Información sobre el Criterio 1.3.1</h2>
+                        <p>Para una explicación completa del criterio 1.3.1, consultá la documentación oficial: <strong><a
+                                    href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships">Criterio 1.3.1
+                                    (WCAG2.2)</a></strong></p>
+
+                        <hr>
+
+                        <h2>¡Tu Feedback es Valioso!</h2>
+                        <p>Esta extensión se encuentra en desarrollo activo. Te agradecería enormemente que la probaras
+                            y Si encontrás errores, falsos positivos o tenés sugerencias, escribime a:
+                            <strong>emilianomontani@gmail.com</strong>
+                        </p>
+                        <p>¡Espero que esta herramienta te sea útil en tu trabajo diario! Muchas gracias por tu colaboración</p>
+                    </div>
+            </details>
         </div>
-
-        <h2>Importante: <strong>Fase beta</strong></h2>
-        <p>Esta es una versión en desarrollo activo.
-            Si bien ofrece resultados útiles, podrían producirse falsos positivos o interpretaciones parciales.
-            Se recomienda verificación manual adicional como respaldo. Se recomienda realizar una verificación manual
-            para confirmar la validez de los errores detectados.</p>
-
-        <h2>¿Qué verifica la extensión?</h2>
-        <p>La extensión detecta los siguientes errores semánticos comunes:</p>
-        <ul>
-            <li>Si hay etiquetas <strong>&lt;div&gt; o &lt;span&gt;</strong> con texto directo no semántico,
-                ignorando los que están dentro de enlaces, botones, listas o con roles apropiados.
-                <em>Nota: </em>Debido a la complejidad de ciertas estructuras HTML, podrían existir
-                falsos positivos.
-            </li>
-            <li>Verifica si hay párrafos vacíos o con " -&nbsp;- ".</li>
-            <li>Si hay etiquetas con <strong>&lt;b&gt;, &lt;u&gt;, &lt;br&gt;, &lt;font&gt;, &lt;s&gt;,
-                    &lt;small&gt;</strong>.
-            </li>
-            <li>Si hay etiquetas <strong>&lt;i&gt;</strong></li>
-            <li>Si hay encabezados vacíos.</li>
-            <li>Si hay más de un encabezado <strong>&lt;h1&gt;</strong>.</li>
-            <li>si hay listas vacías <strong>&lt;ul&gt; o &lt;ol&gt;.</strong></li>
-            <li>Si hay encabezados &lt;ht&gt; vacíos dentro de tablas.</li>
-        </ul>
-        <p>En cada error, se muestra un fragmento del código para facilitar su localización y revisión.</p>
-
-        <hr>
-
-        <h2>Interfaz de Resultados</h2>
-        <p>Los resultados se presentan organizados por tipo de error, dentro de bloques desplegables. Cada bloque
-            incluye:</p>
-
-        <ul>
-            <li>Un resumen con la cantidad de errores detectados para esa categoría.</li>
-            <li>Una lista detallada de errores individuales.</li>
-            <li>Enlace directo al elemento problemático en la página (si es visible, sino muestra una alerta anunciando que está oculto).</li>
-        </ul>
-
-        <img src="semantica_4.png" alt="" style="width: 35%; border: 2px solid black">
-
-        <p>También podés activar la visualización directa en la página, que resalta todos los elementos con error usando
-            colores distintos por tipo.</p>
-
-        <img src="Semantica_2.png" alt="" style="width: 55%; border: 2px solid black">
-
-        <h2>Accesibilidad de la extensión</h2>
-        <ul>
-            <li>Usa role="status" para anunciar resultados nuevos a lectores de pantalla.</li>
-            <li>Se puede utilizar completamente mediante teclado.</li>
-            <li>Incluye indicadores de foco visibles.</li>
-        </ul>
-
-        <h2>Opciones disponibles</h2>
-        <ul>
-            <li>Filtrado por tipo de error (mediante casillas de selección).</li>
-            <li>Filtrado por tipo de error (con color y etiqueta mediante Visualizar errores).</li>
-            <li>Botón para copiar los errores al portapapeles.</li>
-            <li>Botón para limpiar resultados (incluye limpieza automática al cambiar de URL en la mayoría de los
-                sitios).</li>
-        </ul>
-
-        <img src="Semantica_3.png" alt="" style="width: 20%; border: 2px solid black">
-
-        <h2>Más Información sobre el Criterio 1.3.1</h2>
-        <p>Para una explicación completa del criterio 1.3.1, consultá la documentación oficial: <strong><a
-                    href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships">Criterio 1.3.1
-                    (WCAG2.2)</a></strong></p>
-
-        <hr>
-
-        <h2>¡Tu Feedback es Valioso!</h2>
-        <p>Esta extensión se encuentra en desarrollo activo. Te agradecería enormemente que la probaras
-            y Si encontrás errores, falsos positivos o tenés sugerencias, escribime a:
-            <strong>emilianomontani@gmail.com</strong>
-        </p>
-        <p>¡Espero que esta herramienta te sea útil en tu trabajo diario! Muchas gracias por tu colaboración</p>
-    </div>
-
-
-</body>
-
+    </body>
 </html>
