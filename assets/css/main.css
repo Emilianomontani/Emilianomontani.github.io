@@ -233,6 +233,7 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2em 0;
+		color: #c0c0c0;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -956,7 +957,7 @@ input, select, textarea {
 			}
 
 			ul.icons li .icon {
-				color: #505051;
+				color: #f1b308;
 			}
 
 				ul.icons li .icon:before {
@@ -1094,7 +1095,7 @@ input, select, textarea {
 			background-size: 3em;
 			cursor: pointer;
 			height: 5em;
-			opacity: 0.25;
+			opacity: 0.95;
 			position: absolute;
 			right: 0;
 			top: 0;
