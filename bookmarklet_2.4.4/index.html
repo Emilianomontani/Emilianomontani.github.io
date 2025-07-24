@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmarklet: links more 250 caracteres 2.4.4 (OAW)</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+     font-family: "Montserrat", sans-serif;
+      font-size: 1rem;
+      line-height: 1.5;
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #f7f4eb;
+    }
+    a.bookmarklet {
+      display: flex;
+    background-color: #242121;
+    border: 2px solid #242121;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #f7f4eb;
+    width: 100%;
+    justify-content: center;
+    padding: 0.3rem;
+    }
+    a.bookmarklet:hover {
+    background-color: #f7f4eb;
+    border: 2px solid #242121;
+    color: #242121;
+    }
+      a.link-book{
+        text-decoration:underline;
+        font-weight: normal;
+    }
 
+        a.link-book:hover{
+        text-decoration:none;
+        font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+             a.bookmarklet {
+            display: flex;
+          background-color: #242121;
+          border: 2px solid #242121;
+          font-family: "Montserrat", sans-serif;
+          font-size: 1rem;
+          font-weight: 300;
+          color: #f7f4eb;
+          width: 96%;
+          justify-content: center;
+          padding: 0.3rem;
+          margin-left:auto;
+          margin-right:auto;
+          }
+    }
+      
+  </style>
+</head>
+<body>
+  <h1>Enlaces con más de 250 caracteres - Propósito de los enlaces 2.4.4 (O.A.W)</h1>
+  <h2>Comentarios:</h2>
+  <hr>
+  <ul>
+  <li>Este marcador revisa si hay enlaces con más de 250 caracteres en la página y si existen los indica de una forma visual con color y mediante un title en el código</li>
+  <li>Se puede activar y desactivar al presionar sobre el marcador. Un aviso de alerta notifica el estado Activado o Desactivado y además, si existen o no enlaces con error.</li>
+  <li>Este caso de error, no es propiamente de las WCAG sino que aparece en la lista de errores de la herramienta del OAW (Observatorio de Accesibilidad Web) que a su vez tiene excepciones, pero que no se incluyen en la herramienta. Es solo de comprobación. Determinar si es error o no, depende del auditor.</li>
+  </ul>
+   <img src="" style="display:block; width: 80%; margin-left:auto; margin-right:auto; margin-bottom: 1rem" alt="">  
+  <p><strong>Actualización:</strong> versión única.</p>
+  <hr>
+
+  <a class="bookmarklet"
+href="javascript:(function()%7Bconst%20i%3D'__marcador_enlaces_largos__'%2Cm%3Ddocument.getElementById(i)%3Bif(m)%7Bdocument.querySelectorAll('[data-longlink%3D%22true%22]').forEach(e%3D%3E%7Be.style.outline%3D''%3Be.style.backgroundColor%3D''%3Be.removeAttribute('data-longlink')%3Be.removeAttribute('title')%7D)%3Bm.remove()%3Balert('%F0%9F%94%B4%20Marcador%20de%20enlaces%20largos%20desactivado.')%3Breturn%7Dconst%20d%3Ddocument.createElement('div')%3Bd.id%3Di%3Bd.style.display%3D'none'%3Bdocument.body.appendChild(d)%3Bconst%20b%3D'%23A00C0C'%2Cf%3D'%23F0F439'%3Blet%20c%3D0%3Bdocument.querySelectorAll('a%2C%5Brole%3D%22link%22%5D').forEach(e%3D%3E%7Bconst%20t%3De.innerText.trim()%3Bif(t.length%3E250)%7Be.style.outline%3D'2px%20solid%20'%2Bb%3Be.style.backgroundColor%3Df%3Be.setAttribute('data-longlink'%2C'true')%3Be.title%3D%60Este%20enlace%20tiene%20%24%7Bt.length%7D%20caracteres%20visibles.%60%3Bc++%7D%7D)%3Bif(c%3D%3D%3D0)%7Balert('%E2%84%B9%EF%B8%8F%20No%20se%20encontraron%20enlaces%20con%20m%C3%A1s%20de%20250%20caracteres.')%3Bd.remove()%7Delse%7Balert(%60%F0%9F%9F%A2%20Marcador%20activado%3A%20se%20marcaron%20%24%7Bc%7D%20enlace(s)%20largo(s).%60)%3Bwindow.addEventListener('beforeunload'%2C()%3D%3E%7Bdocument.querySelectorAll('[data-longlink%3D%22true%22]').forEach(e%3D%3E%7Be.style.outline%3D''%3Be.style.backgroundColor%3D''%3Be.removeAttribute('data-longlink')%3Be.removeAttribute('title')%7D)%7D)%7D%7D)();">250 CRTRS</a>
+
+<p>
+    También podés hacer clic derecho y seleccionar "Guardar este enlace como marcador" si estás en móvil o no podés arrastrarlo.
+  </p>
+  <hr>
+  <h2>Contacto para Comentarios y Errores:</h2>
+    <p>Si tienes comentarios, recomendaciones o encuentras algún error, por favor, no dudes en contactarme a través de: <strong>emilianomontani@gmail.com</strong></p>
+    <p>¡Espero que esta herramienta te sea útil en tu trabajo diario! Muchas gracias por tu colaboración</p>
+</body>
+</html>
