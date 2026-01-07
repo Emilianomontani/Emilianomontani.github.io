@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmarklet: Circles 2.5.8 Target size (minimum) </title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Montserrat", sans-serif;
+      font-size: 1rem;
+      line-height: 1.5;
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #f7f4eb;
+    }
+    a.bookmarklet {
+    display: flex;
+    background-color: #242121;
+    border: 2px solid #242121;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #f7f4eb;
+    width: 100%;
+    justify-content: center;
+    padding: 0.3rem;
+    }
+    a.bookmarklet:hover {
+      background-color: #f7f4eb;
+    border: 2px solid #242121;
+    color: #242121;
+    }
+    a.bookmarklet_2 {
+    display: flex;
+    background-color: #f7f4eb;
+    border: 2px solid #242121;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    color: #242121;
+    width: 100%;
+    justify-content: center;
+    padding: 0.3rem;
+    }
+    a.bookmarklet_2:hover {
+    background-color: #242121;
+    border: 2px solid #242121;
+    color: #f7f4eb;
+    }
+      a.link-book{
+        text-decoration:underline;
+        font-weight: normal;
+    }
+        a.link-book:hover{
+        text-decoration:none;
+        font-weight: bold;
+    }
+
+    .list_items{
+      border: 1px solid #242121;
+      padding: 1.6rem;
+    }
+
+    .list_items li{
+      margin-bottom: 1.2rem;
+    list-style-type: square;
+    }
+
+    @media (max-width: 768px) {
+          a.bookmarklet {
+        display: flex;
+        background-color: #242121;
+        border: 2px solid #242121;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1rem;
+        font-weight: 300;
+        color: #f7f4eb;
+        width: 96%;
+        justify-content: center;
+        padding: 0.3rem;
+        margin-left:auto;
+        margin-right:auto;
+        }
+
+          a.bookmarklet_2 {
+        display: flex;
+        background-color: #f7f4eb;
+        border: 2px solid #242121;
+        font-family: "Montserrat", sans-serif;
+        font-size: 1rem;
+        font-weight: 300;
+        color: #242121;
+        width: 96%;
+        justify-content: center;
+        padding: 0.3rem;
+        margin-left:auto;
+        margin-right:auto;
+        }
+      
+    }
+  </style>
+</head>
+<body>
+  <h1>CIRCLES – Bookmarklet for Evaluating WCAG 2.5.8 (Target Size)</h1>
+  <a lang="es-ES" href="https://emilianomontani.github.io/bookmarklet/">ir a la versión en Castellano</a>
+  <h2>Comments:</h2>
+  <p><strong>The bookmarklet only highlights elements smaller than 24px (based on their clickable area).</strong></p>
+  <img src="circles_5.png" style="display:block; margin-left:auto; margin-right:auto;" alt="">
+  <p>
+   Drag this button to your bookmarks bar. Then, when visiting a website, click the bookmarklet to display a 24px circle around all interactive elements smaller than 24px (considering their clickable area). This allows you to check whether the circles overlap with each other. The circle has a red border and may not contrast well against certain background colors.
+  </p>  
+  <h2 id="id_head"><strong>Update: </strong></h2>
+    <ul aria-labelledby="id_head" class="list_items">
+      <li>A black-and-white dotted line has been added to the top and bottom of each circle to improve visual detection of alignment and target proximity.</li>
+      <li>An alert message notifies the number of overlapping controls. This may vary depending on screen zoom or browser version. Be sure to test on multiple screen sizes.</li>
+      <li>A new feature detects links and buttons that contain images, using the image size as the clickable area.</li>
+    </ul>
+<img src="circles_1.png" style="display:block; margin-left:auto; margin-right:auto;" alt="">
+  <p><strong>Note: </strong>On some layouts, the bookmarklet might highlight hidden or non-fixed elements depending on how the site is built. Additionally, this tool is not fully accessible for users with low vision, as it does not offer sensory alternatives.</p>
+
+ <a class="bookmarklet"
+href="javascript:(function(){var m=24,n='target-circle-overlay',v=window,d=document,q=d.querySelectorAll.bind(d);function isVisible(el){while(el&&el.nodeType===1){var s=getComputedStyle(el);if(s.display==='none'||s.visibility==='hidden')return false;el=el.parentNode;}return true;}var existentes=q('.'+n);if(existentes.length){existentes.forEach(function(e){e.remove();});alert('OFF');}else{q('a[href],button,input,textarea,select,[tabindex]:not([tabindex=\'-1\'])').forEach(function(el){var t=el.getBoundingClientRect(),w=t.width,h=t.height;var skip=false;if((el.tagName==='A'||el.tagName==='BUTTON')){var imgs=el.querySelectorAll('img');if(imgs.length===1){var img=imgs[0];var ir=img.getBoundingClientRect();if(ir.width>=m&&ir.height>=m&&isVisible(img)){skip=true;}}}if((w<m||h<m)&&!skip){if(isVisible(el)){var cx=v.scrollX+t.left+w/2,cy=v.scrollY+t.top+h/2;var o=d.createElement('div');o.className=n;o.style.position='absolute';o.style.top=(cy-m/2)+'px';o.style.left=(cx-m/2)+'px';o.style.width=m+'px';o.style.height=m+'px';o.style.border='2px dashed red';o.style.borderRadius='50%';o.style.pointerEvents='none';o.style.zIndex='9999';d.body.appendChild(o);var circleBox=o.getBoundingClientRect();var circleTop=v.scrollY+circleBox.top;var circleBottom=v.scrollY+circleBox.bottom;var lineTop=d.createElement('div');lineTop.className=n;lineTop.style.position='absolute';lineTop.style.top=circleTop+'px';lineTop.style.left=(cx-100)+'px';lineTop.style.width='200px';lineTop.style.height='1px';lineTop.style.background='repeating-linear-gradient(to right, white, white 5px, black 5px, black 10px)';lineTop.style.pointerEvents='none';lineTop.style.zIndex='9998';d.body.appendChild(lineTop);var lineBottom=d.createElement('div');lineBottom.className=n;lineBottom.style.position='absolute';lineBottom.style.top=circleBottom+'px';lineBottom.style.left=(cx-100)+'px';lineBottom.style.width='200px';lineBottom.style.height='1px';lineBottom.style.background='repeating-linear-gradient(to right, white, white 5px, black 5px, black 10px)';lineBottom.style.pointerEvents='none';lineBottom.style.zIndex='9998';d.body.appendChild(lineBottom);}}});alert('ON. Only elements smaller than 24px are shown.');}})();"
+>Circles (2.5.8) AA</a>
+  
+  <p>
+    You can also right-click and choose "Bookmark this link" if you're on mobile or unable to drag it.
+  </p>
+
+   <p>More information: <a class="link-book" href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum" >2.5.8 Target Size Minimum</a></p>
+<hr>
+<h2>Criteria 2.5.5 Target Size (Enhanced) </h2>
+<p>This is an optional extra to check for elements smaller than 44px by 44px. It does not analyze overlaps; it simply highlights all elements below the threshold.</p>
+   <img src="cicles_4.png" style="display:block; width: 80%; margin-left:auto; margin-right:auto; margin-bottom: 1rem" alt="">  
+  <a class="bookmarklet_2"
+href="javascript:(function(){var m=44;var n='target-circle-overlay';var v=window;var d=document;var q=d.querySelectorAll.bind(d);var l=localStorage;var k='myBookmarklet_isVisible';var colorKey='myBookmarklet_selectedColor';var panelId='color-picker-panel';function isVisible(el){while(el&&el.nodeType===1){var s=getComputedStyle(el);if(s.display==='none'||s.visibility==='hidden')return false;el=el.parentNode;}return true;}function removeCircles(){q('.'+n).forEach(function(e){e.remove();});}function createElements(color){removeCircles();var smallElementsCount=0;q('a[href],button,input,textarea,select,[tabindex]:not([tabindex=\'-1\'])').forEach(function(el){var t=el.getBoundingClientRect();var w=t.width;var h=t.height;var skip=false;if((el.tagName==='A'||el.tagName==='BUTTON')){var imgs=el.querySelectorAll('img');if(imgs.length===1){var img=imgs[0];var ir=img.getBoundingClientRect();if(ir.width>=m&&ir.height>=m&&isVisible(img)){skip=true;}}}if((w<m||h<m)&&!skip){if(isVisible(el)){smallElementsCount++;var cx=v.scrollX+t.left+w/2;var cy=v.scrollY+t.top+h/2;var o=d.createElement('div');o.className=n;o.style.position='absolute';o.style.top=(cy-m/2)+'px';o.style.left=(cx-m/2)+'px';o.style.width=m+'px';o.style.height=m+'px';o.style.border='2px dashed '+color;o.style.borderRadius='50%';o.style.pointerEvents='none';o.style.zIndex='9999';d.body.appendChild(o);}}});alert('Number of elements smaller than '+m+'px: '+smallElementsCount);l.setItem(k,'true');}var existingPanel=d.getElementById(panelId);if(existingPanel){existingPanel.remove();removeCircles();l.setItem(k,'false');}else{var panel=d.createElement('div');panel.id=panelId;panel.style.cssText='position:fixed; top:10px; right:10px; z-index:10000; background:rgba(255,255,255,0.9); padding:10px; border-radius:8px; box-shadow:0 2px 10px rgba(0,0,0,0.2); display:flex; gap:10px; align-items:center;';var selectLabel=d.createElement('p');selectLabel.textContent='Color:';selectLabel.style.margin='0';panel.appendChild(selectLabel);var colorPreview=d.createElement('span');colorPreview.style.cssText='display:inline-block;width:12px;height:12px;border-radius:50%;border:1px solid #333;margin-right:5px;';panel.insertBefore(colorPreview,selectLabel.nextSibling);var%20colorSelect=d.createElement('select');var%20savedColor=l.getItem(colorKey)||'#E00D0D';colorSelect.innerHTML=%60%3Coption%20value=%22#E00D0D%22%20${savedColor==='#E00D0D'?'selected':''}%3ERojo%20(#E00D0D)%3C/option%3E%3Coption%20value=%22#000000%22%20${savedColor==='#000000'?'selected':''}%3ENegro%20(#000000)%3C/option%3E%3Coption%20value=%22#FFFFFF%22%20${savedColor==='#FFFFFF'?'selected':''}%3EBlanco%20(#FFFFFF)%3C/option%3E%3Coption%20value=%22#1AE8DD%22%20${savedColor==='#1AE8DD'?'selected':''}%3ECyan%20(#1AE8DD)%3C/option%3E%3Coption%20value=%22#F03A9B%22%20${savedColor==='#F03A9B'?'selected':''}%3EMagenta%20(#F03A9B)%3C/option%3E%3Coption%20value=%22#F9FA3E%22%20${savedColor==='#F9FA3E'?'selected':''}%3EAmarillo%20(#F9FA3E)%3C/option%3E%60;colorSelect.style.padding='5px';colorSelect.style.borderRadius='4px';panel.appendChild(colorSelect);var%20closeBtn=d.createElement('button');closeBtn.textContent='%E2%9C%95';closeBtn.setAttribute('aria-label','Cerrar%20marcador');closeBtn.style.cssText='background:transparent;%20border:none;%20font-size:1.2em;%20cursor:pointer;';closeBtn.innerHTML='%3Cspan%20aria-hidden=%22true%22%3E%E2%9C%95%3C/span%3E%3Cspan%20style=%22position:absolute;clip:rect(1px,1px,1px,1px);padding:0;border:0;height:1px;width:1px;overflow:hidden;%22%3ECerrar%20marcador%3C/span%3E';closeBtn.onclick=function(){panel.remove();removeCircles();l.setItem(k,'false');};panel.appendChild(closeBtn);d.body.appendChild(panel);colorSelect.onchange=function(e){var%20newColor=e.target.value;l.setItem(colorKey,newColor);colorPreview.style.backgroundColor=newColor;createElements(newColor);};colorPreview.style.backgroundColor=savedColor;createElements(savedColor);}})();"
+>Circles (2.5.5) AAA</a>
+
+ <p>More information: <a class="link-book" href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced" >2.5.5 Target Size (Enhanced) (Level AAA)</a></p>
+  <hr>
+   <hr>
+  <h2>Link to other autor bookmarklets:</h2>
+  <ul>
+    <li style="
+    list-style: none;
+    margin-bottom: 0.5rem;
+"><a class="bookmarklet" href="https://emilianomontani.github.io/bookmarklet_2.4.7/index_en.html" target="_blank" title="Open a new window">Focus (2.4.7)</a></li>
+    <li style="
+    list-style: none;
+    margin-bottom: 0.5rem;
+"><a class="bookmarklet" href="https://emilianomontani.github.io/bookmarklet_2.4.4/" target="_blank" title="Open a new window">250 y alt = txt (2.4.4)</a></li>
+    <li style="
+    list-style: none;
+    margin-bottom: 0.5rem;
+"><a class="bookmarklet" href="https://chromewebstore.google.com/detail/sem%C3%A1ntica-131/nolhohpickkeagokfgbngchdkdaffcgh?hl=es" target="_blank" title="Open a new window">Semántica (en Chrome Store)</a></li></ul>
+  <hr>
+  <h2>Feedback and Issues:</h2>
+    <p>If you have feedback, suggestions, or find any bugs, feel free to contact me at: <strong>emilianomontani@gmail.com</strong></p>
+    <p>The code is open to improvement and customization. If you make any enhancements, I’d be happy to test them!</p>
+  <p>I hope this tool is helpful in your daily work! Thank you very much for your collaboration. :)</p>
+</body>
+</html>
