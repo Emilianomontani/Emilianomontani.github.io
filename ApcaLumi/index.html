@@ -109,11 +109,22 @@
   <h1>ApcaLumi - Aplicación Dual de contraste.</h1>
   <a lang="en" href="#">Access the English version</a>
   <h2>Comentarios:</h2>
-  <p><strong>la Aplicación solo está disponible para Windows actualmente (versión Beta).</strong></p>
+  <p><strong>La aplicación solo está disponible para Windows actualmente (versión Beta).</strong></p>
   <img src="" style="display:block; margin-left:auto; margin-right:auto;" alt="">
   <p>
-    Texto que explica como funciona
-  </p>  
+    Optimice y valide la legibilidad de sus interfaces digitales mediante un análisis dual de color basado en estándares vigentes y futuros. El funcionamiento es directo:
+<ul>
+  <li>Selección de color: Utilice el gotero para capturar el color de texto (foreground) y el color de fondo (background).</li>
+  <li>Cálculo de Relación de Contraste (WCAG 2.2): Evalúa la diferencia de luminancia relativa aplicando la fórmula matemática de los 
+    Criterios de Conformidad 1.4.3 (Contraste mínimo, Nivel AA) y 1.4.6 (Contraste mejorado, Nivel AAA). Determina con precisión si se alcanza el ratio 
+  requerido de 4.5:1 (o 3:1 para texto grande) en AA, o de 7:1 (o 4.5:1 para texto grande) en AAA.</li>
+  <li>Predicción Avanzada (Algoritmo APCA): Procesa los valores bajo el Advanced Perceptual Contrast Algorithm (APCA). 
+    A diferencia de la luminancia lineal tradicional, APCA pondera la percepción visual humana, el contexto espacial y la dirección del contraste (texto claro sobre fondo oscuro o viceversa).</li>
+  <li>Recomendación de Escala: La aplicación devuelve una matriz de cumplimiento que indica el tamaño de fuente mínimo en píxeles (px) 
+    y el peso tipográfico (weight) necesarios para garantizar una correcta legibilidad perceptiva.</li>
+</ul>
+  </p>
+  <hr>
   <h2 id="id_head"><strong>Actualización: </strong></h2>
     <ul aria-labelledby="id_head" class="list_items">
       <li>Sin actualizaciones actualmente.</li>
@@ -126,7 +137,7 @@
     Instalarlo es responsabilidad de las personas usuarias. El archivo de instalación se generó mediante Electron  y está alojado en una web personal sin fines lucrativos.
   </p>
 
-   <p>Más información: <a class="link-book" href="#">APCA Documentación oficial</a></p>
+   <p>Más información: <a class="link-book" href="https://www.w3.org/WAI/GL/task-forces/silver/wiki/User:Myndex/APCA_model#The_SAPC/APCA_Model_for_Predicting_Contrast">APCA Documentación oficial</a></p>
    <hr>
   <h2>Enlace a otros marcadores del autor:</h2>
   <ul>
